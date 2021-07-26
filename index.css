@@ -1,0 +1,502 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    transition: 0.3s;
+    scroll-behavior: smooth;
+}
+:root
+{
+    --x:translateX(200%);
+    --img:url("menu.png") no-repeat;
+}
+.active
+{
+    --x:translateX(0%);
+    --img:url("close.png") no-repeat;
+}
+html
+{
+    font-size: 100%;
+}
+.Home
+{
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 132, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(30% 0%, 100% 0, 100% 30%, 100% 100%, 63% 100%, 100% 100%, 0 85%, 0 0);
+}
+.Home .nav_section
+{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    /* background: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Home .nav_section .logo
+{
+    font-size: 2.5rem;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    color: #fff;
+    cursor: pointer;
+}
+.Home .nav_section .menu
+{
+    width: 40px;
+    height:35px;
+    background: var(--img);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Home .nav 
+{
+    position: absolute;
+    top: 8%;
+    right: 10%;
+    width: 20%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.Home .nav ul
+{
+    transform: var(--x);
+    background: rgb(0, 81, 255);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+    z-index: 2;
+}
+.Home .nav ul li
+{
+    list-style: none;
+    margin: 20px;
+    font-size: 2rem;
+    padding: 5px 100px;
+}
+.Home .nav ul li:hover
+{
+    background: rgb(0, 132, 255);
+}
+.Home .nav ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+.Home .text
+{
+    width: 50%;
+    height: 60%;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.Home .text h1
+{
+    font-size: 3.5rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+.Home .text h2
+{
+    margin: 20px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.Home .text #text
+{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-family: 'Otomanopee One', sans-serif;
+}
+.Home .text a
+{
+    width: 120px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:  1px solid #fff;
+    color: #fff;
+    z-index: 1;
+}
+.Home .text a:hover
+{
+    background: rgb(5, 111, 211);
+    color: #fff;
+}
+.Home .icon 
+{
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    width: 5%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: red; */
+}
+.Home .icon .fb,.tw,.yo
+{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: blue; */
+    margin: 10px;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.Home .icon .tw, .fb,.yo, a
+{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.Home .yo:hover
+{
+    transform: translateY(-5px);
+}
+
+.Home .fb:hover
+{
+    transform: translateY(-5px);
+}
+
+.Home .tw:hover
+{
+    transform: translateY(-5px);
+}
+/* aboyt section  */
+
+.about
+{
+    width: 100%;
+    height: 100vh;
+    /* clip-path: polygon(100% 14%, 100% 24%, 100% 21%, 100% 70%, 100% 100%, 0 100%, 0 70%, 0 0); */
+    clip-path: polygon(100% 14%, 100% 24%, 100% 21%, 100% 70%, 100% 100%, 0 84%, 0 70%, 0 0);
+    background: rgb(0, 132, 255);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+}
+.about .title
+{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    letter-spacing: 2px;
+}
+.about .text
+{
+    width: 55%;
+    height: 50vh;
+    margin-top: 10%;
+    margin-left: 2%;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    position: relative;
+}
+.about .text .title
+{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.about .text .title .type_2
+{
+    font-size: 3rem;
+}
+.about .text p
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    /* /* text-align: justify; */
+} 
+.about .text a
+{
+    width: 120px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 3%;
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+}
+.about .text a:hover
+{
+    background: rgb(0, 98, 255);
+}
+
+/* photo section  */
+
+.knowledge
+{
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 98, 255);
+    clip-path: polygon(100% 14%, 100% 24%, 100% 21%, 100% 70%, 100% 100%, 0 84%, 0 70%, 0 0);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.knowledge .title
+{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    font-size: 3rem;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.knowledge .min
+{
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* background: rgb(0, 255, 157); */
+}
+.knowledge .min .box
+{
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    margin: 20px;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(255, 255, 255, 0.198));
+}
+.knowledge .min .box:hover
+{
+    transform: translateY(-10px);
+}
+.knowledge .min .box .icon
+{
+    font-size: 6rem;
+    color: rgb(0, 132, 255);
+}
+.knowledge .min .box h1
+{
+    font-size: 2rem;
+}
+.knowledge .min .box a
+{
+    width: 120px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid rgb(0, 132, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: rgb(0, 132, 255);
+}
+.knowledge .min .box a:hover
+{
+    background: rgb(0, 132, 255);
+    color: #fff;
+}
+.contact
+{
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 132, 255);
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    clip-path: polygon(100% 12%, 100% 33%, 100% 60%, 100% 100%, 0 100%, 0 60%, 0 0);
+}
+.contact .title
+{
+    position: absolute;
+    top: 10px;
+    left: 2%;
+    font-size: 4rem;
+    color: #fff;
+    font-family: 'Zen Tokyo Zoo', cursive;
+}
+.contact .min
+{
+    margin-left: 10px;
+    width: 45%;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: red; */
+}
+.contact .min .name
+{
+    width: 95%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.contact .min .name input
+{
+    width: 45%;
+    height: 50px;
+    outline: none;
+    border-radius: 15px;
+    border: 2px solid red;
+}
+.contact .min .mail_text
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 50vh;
+}
+.contact .min .mail_text input
+{
+    width: 100%;
+    border-radius: 15px;
+    height: 15%;
+    border: 2px solid red;
+    outline: none;
+}
+.contact .min .mail_text #one
+{
+    height: 55%;
+    margin-top: 5%;
+    border: 2px solid red;
+    outline: none;
+}
+.contact .min a
+{
+    width: 120px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+.contact .min a:hover
+{
+    background: #fff;
+    color: black;
+    border: none;
+}
+
+
+
+@media screen and (min-width:769px) and (max-width:991px){
+    html{font-size: 150%;}
+    .Home .text{width: 80%;}
+    .Home .icon{width: 10%;top: 50%;}
+    .Home .icon .fb, .tw, .yo, .in{margin: 30px;}
+    .about .text{width: 100%;}
+    .about .title{top: 10%;}
+    .knowledge .min{grid-template-columns: repeat(2,1fr);}
+    .knowledge .title{top: 10%;}
+    .contact .min {width: 60%;}
+}
+
+@media screen and (min-width:601px) and (max-width:768px){
+    html{font-size: 100%;}
+    .Home .text{    width: 100%;}
+    .Home .text h2 {font-size: 2rem;}
+    .Home .icon{top: 42%;    width: 11%;}
+    .about .text {width: 100%;}
+    .about .title {    top: 10%;}
+    .about .text p{font-size: 2rem;}
+    .knowledge .min{grid-template-columns: repeat(1,1fr);margin-bottom: 35%;}
+    .knowledge .title {top: 10%;}
+    .knowledge {height: 150vh;}
+    .contact .min {width: 95%;}
+    .contact .title { top: 30px;}
+}
+
+
+@media screen and (min-width:321px) and (max-width:600px){
+    .Home .icon{right: 10%; top: 40%;}
+    .Home .text {width: 100%;}
+    .Home .text h2 {margin-top: 27px;padding: 2px;font-size: 1rem;}
+    .Home .text{margin-bottom: 50%;}
+    .Home .nav{width: 55%;height: 70vh;}
+    .about .text{width: 100%;height: 50vh;}
+    .about .title {font-size: 2rem;top: 13%;}
+    .about .text .title{font-size: 1.5rem;top:-15%;} 
+    .about .text p{font-size: 1.3rem;}
+    .knowledge {height: 210vh;clip-path: polygon(100% 9%, 100% 26%, 100% 23%, 100% 70%, 100% 100%, 0 93%, 0% 70%, 0 0);}
+    .knowledge .title{top: 10%;font-size: 2.5rem;}
+    .knowledge .min{grid-template-columns: repeat(1,1fr); height: 110vh;}
+    .contact .min{width: 95%;}
+    .contact .title{top: 25px;}
+    .about .text .title .type_2{font-size: 1.5rem;}
+}
+ 
+@media screen and (min-width:200px) and (max-width:320px){
+    html{font-size: 80%;}
+    .knowledge .min {height: 135vh;}
+    .Home .text{width: 100%;}
+    .Home .icon{top: 50%;right: 4%;}
+    .Home .icon .fb, .tw, .yo, .in {margin: 0px;}
+    .about .text{width: 100%;}
+    .about .text p{font-size: 1.3rem;}
+    .about .text .title{top: -10%; font-size: 1rem;}
+    .knowledge .min {grid-template-columns: repeat(1,1fr);}
+    .knowledge {height: 250vh;margin-bottom: 35%;}
+    .knowledge .title{top: 10%;}
+    .contact .min {width: 75%;}
+} 
